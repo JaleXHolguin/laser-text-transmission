@@ -29,7 +29,8 @@ La transmisión utiliza una estructura similar a la comunicación serial:
 # Arquitectura del sistema
 
 ```mermaid
-flowchart LR
+flowchart TD
+%% Diseño en dos columnas para mayor claridad
 
 subgraph Emisor
 PC1[Computadora Emisora]
@@ -37,22 +38,27 @@ ARD1[Arduino Emisor]
 LASER[Modulo Laser KY-008]
 end
 
-subgraph Canal
-AIR[Transmision por luz en el aire]
-end
-
 subgraph Receptor
-SENSOR[Sensor de luz Fotodiodo LM393]
+SENSOR[Sensor Fotodiodo LM393]
 ARD2[Arduino Receptor]
 PC2[Computadora Receptora]
 end
 
+subgraph Canal
+AIR[Transmisión por luz en el aire]
+end
+
+%% Conexiones Emisor -> Canal -> Receptor
 PC1 -->|Mensaje de texto| ARD1
 ARD1 -->|Bits 0 y 1| LASER
 LASER -->|Pulsos de luz| AIR
 AIR --> SENSOR
 SENSOR -->|Señal digital| ARD2
 ARD2 -->|Texto reconstruido| PC2
+
+%% Layout en columnas
+Emisor --- Canal
+Canal --- Receptor
 ```
 
 ---
