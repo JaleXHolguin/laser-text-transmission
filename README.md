@@ -1,4 +1,9 @@
-# Sistema de Transmisión de Texto mediante Láser con Arduino
+<h1 align="center">Sistema de Transmisión de Texto mediante Láser con Arduino</h1>
+<p align="center">
+  <a href="https://www.arduino.cc/en/software"><img src="https://img.shields.io/badge/Arduino-Uno-blue" alt="Arduino"></a>
+  <a href="https://cplusplus.com/"><img src="https://img.shields.io/badge/Language-C%2B%2B-green" alt="Language"></a>
+  <a href="https://github.com/JaleXHolguin"><img src="https://img.shields.io/badge/Project-Academic-orange" alt="Status"></a>
+</p>
 
 Este proyecto implementa un sistema básico de **comunicación óptica**,
 donde un mensaje de texto se transmite utilizando **pulsos de luz
